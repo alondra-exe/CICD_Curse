@@ -6,7 +6,7 @@ export const validateLenght = async (): Promise<boolean> => {
   try {
     const received: FactDefinition | undefined = await getFact(FACT);
     if (!received) throw Error;
-    return received.fact.length === received.length;
+    return received.fact.length == received.length;
   } catch (error) {
     return false;
   }
